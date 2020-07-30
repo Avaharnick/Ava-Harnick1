@@ -11,13 +11,13 @@ public class Challenge4{
 		System.out.println("Please enter a word:");//Promts the user to enter a string 
 		String s=input.next();
 		s=s.toLowerCase();//Converts the String to lower case 
-		if((pal(s))){
-			System.out.println("This is a palidrome");
+		if((isPalidrome(s))){
+			System.out.println("This word is a palidrome");
 		}else{
-			System.out.println("This is NOT a palidrome");
+			System.out.println("This word is NOT a palidrome");
 		}
 	}
-	public static boolean pal(String s){//Takes in a String and then determines if that String is a palidrome 
+	public static boolean isPalidrome(String s){//Takes in a String and then determines if that String is a palidrome 
 		if(s.length()==1){//If the string is one letter, it is a palidrome 
 			return true;
 		}
