@@ -1,0 +1,21 @@
+const express=require('express');
+const mongoose=require('mongoose');
+
+const appTest=express();
+
+const DATABASE_URL="momgodb//localhost/tamid";
+const PORT=9000;
+
+mongoose.connect(DATABASE_URL,{useNewUrlPaeser:true, useUnifyTopology});
+
+const database=mongoose.connection;
+
+appTest.use(express.json());
+
+appTest.Create('/',(req,res,next)=>res.send("This is the to do this I am creating"));
+
+appTest.get('/',(req,res,next)=>res.send("TO-DO list"));
+
+appTest.listen(Port,()=>console.log("Do you have any requests for the to do list"));
+
+appTest.get("/Things to do");
